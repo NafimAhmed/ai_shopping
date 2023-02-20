@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -24,7 +26,32 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Login(),
+      // AnimatedSplashScreen(
+      //     duration: 3000,
+      //     splash: Scaffold(
+      //       body: Container(
+      //
+      //         width: AppLayout.getScreenWidth(),
+      //         height: AppLayout.getScreenHeight(),
+      //         child: Column(
+      //           mainAxisAlignment: MainAxisAlignment.center,
+      //           crossAxisAlignment: CrossAxisAlignment.center,
+      //           children: [
+      //             Image.asset(
+      //               "assets/aircraft_gif.gif",
+      //               height: AppLayout.getScreenHeight(),
+      //               width: AppLayout.getScreenWidth(),
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      //     nextScreen: LogInScreen(),
+      //     splashTransition: SplashTransition.fadeTransition,
+      //     splashIconSize: double.maxFinite,
+      //     //pageTransitionType: PageTransitionType.scale,
+      //     backgroundColor: Colors.black),
     );
   }
 }
