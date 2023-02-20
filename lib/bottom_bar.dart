@@ -1,11 +1,11 @@
-import 'package:air_ticket_app/screens/home_screen.dart';
-import 'package:air_ticket_app/screens/profile_screen.dart';
-import 'package:air_ticket_app/screens/search_screen.dart';
-import 'package:air_ticket_app/screens/ticket_screen.dart';
-//import 'package:air_ticket_app/screens/ticket_screen_main.dart';
+
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'pages/Account.dart';
+import 'pages/cart_page.dart';
+import 'pages/home_page.dart';
 
 // class BottomBar extends StatefulWidget{
 //   const BottomBar({Key? key}):super(key: key);
@@ -20,13 +20,13 @@ class BottomBar extends StatelessWidget{
 
   static final List<Widget> _widgetOptions =<Widget>[
 
-    const HomeScreen(),
-     SearchScreen(),
-     TicketScreen(),
+     HomeScreen(),
+    CartPage(),
+     //TicketScreen(),
     //const TicketScreenMain(),
     //const Text("ticket"),
     //const Text("Profile"),
-    const ProfileScreen(),
+     AccountPage(),
 
   ];
 
@@ -68,16 +68,15 @@ class BottomBar extends StatelessWidget{
         unselectedItemColor: Colors.pink.shade800,
         items: [
           BottomNavigationBarItem(
-
               activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
               icon: Icon(FluentSystemIcons.ic_fluent_home_regular, size: 30,),
               label: "Home"
           ),
           BottomNavigationBarItem(
             activeIcon: Icon(FluentSystemIcons.ic_fluent_airplane_filled),
-            icon: Icon(FluentSystemIcons.ic_fluent_airplane_regular, size: 30,),label: "Book",),
-          BottomNavigationBarItem(activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
-              icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular, size: 30,),label: "Ticket"),
+            icon: Icon(FluentSystemIcons.ic_fluent_airplane_regular, size: 30,),label: "Cart",),
+          // BottomNavigationBarItem(activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
+          //     icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular, size: 30,),label: "Ticket"),
           BottomNavigationBarItem(activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
               icon: Icon(FluentSystemIcons.ic_fluent_person_regular, size: 30,),label: "Profile"),
         ],
